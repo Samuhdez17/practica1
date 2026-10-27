@@ -1,0 +1,30 @@
+@if (numero) {
+    <h1>TABLA DEL {{numero}}</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Operacion
+                </th>
+                <th>
+                    Resultado
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (n of [].constructor(10); track $index;) {
+            <tr>
+                <td>
+                    {{numero}} x {{$index+1}}
+                </td>
+                <td>
+                    {{(($index+1) * numero)}} <!-- ESTE TIPO DE OPERACIONES DEBERIAN HACERSE EN LA CLASE PARA NO ESTAR OPERANDO CADA VEX QUE CARGUE -->
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+
+} @else {
+    <h1>Selecciona una tabla para mostrar</h1>
+}

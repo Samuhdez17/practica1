@@ -1,0 +1,11 @@
+<nav>
+    <ul id="menu">
+        @for (n of numeros; track n) {
+            <a [routerLink]="['/tabla', n]"
+            style="padding: 10px;" 
+            > 
+                Tabla del {{n}}
+            </a>
+        }
+    </ul>
+</nav>
